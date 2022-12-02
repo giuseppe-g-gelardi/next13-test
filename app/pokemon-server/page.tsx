@@ -19,15 +19,14 @@ async function fetchPokeDetails() {
   return pokemonDetails
 }
 
-export default async function PokemonTest() {
+export default async function PokemonServerPage() {
   const pokemonDetails = await fetchPokeDetails()
-  // console.log(pokemonDetails)
 
   return (
     <div className="flex flex-col">
       <div>
         <div className="flex flex-col items-center justify-center mt-8 text-lg">
-          <h1 className="text-4xl text-rose-400">Hey</h1>
+          <h1 className="text-4xl text-rose-400 mb-6">Hey</h1>
           <p>This page uses server components!</p>
           <p>if you would like to checkout the same page on the client click
             <Link href='/pokemon-client' className='text-rose-400 font-bold underline hover:text-purple-600 mx-2'>
