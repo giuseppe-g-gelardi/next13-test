@@ -1,6 +1,6 @@
 
 
-const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon/?limit=1'
+const POKEAPI_URL = 'https://pokeapi.co/api/v2/pokemon/?limit=151'
 
 
 async function getPokemon() {
