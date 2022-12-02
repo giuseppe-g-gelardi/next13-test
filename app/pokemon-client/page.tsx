@@ -12,8 +12,8 @@ export default function PokemonClientPage() {
       <div>
         <div className="flex flex-col items-center justify-center mt-8 text-lg">
           <h1 className="text-4xl  text-fuchsia-500 mb-6">Hey</h1>
-          <p>This page uses server components!</p>
-          <p>if you would like to checkout the same page on the client click
+          <p>This page is rendered on the client!</p>
+          <p>if you would like to checkout the same page rendered on the server click
             <Link href='/pokemon-server' className='text-blue-200 font-bold underline hover:text-purple-600 mx-2'>
               HERE
             </Link>
