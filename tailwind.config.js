@@ -7,9 +7,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-sans)'],
-      }
+      // fontFamily: {
+      //   sans: ['var(--font-sans)'],
+      // }
     },
   },
   plugins: [],

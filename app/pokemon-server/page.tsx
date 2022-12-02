@@ -28,7 +28,7 @@ export default async function PokemonServerPage() {
         <div className="flex flex-col items-center justify-center mt-8 text-lg">
           <h1 className="text-4xl text-rose-400 mb-6">Hey</h1>
           <p>This page uses server components!</p>
-          <p>if you would like to checkout the same page on the client click
+          <p>if you would like to checkout the same page rendered on the client click
             <Link href='/pokemon-client' className='text-rose-400 font-bold underline hover:text-purple-600 mx-2'>
               HERE
             </Link>
