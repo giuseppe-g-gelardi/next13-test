@@ -3,6 +3,13 @@ import { ServerThemeProvider } from "next-themes";
 import Providers from "./Providers";
 import Header from "./components/Header";
 import "./output.css";
+import { Roboto } from '@next/font/google'
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-roboto',
+})
 
 export default function RootLayout({
   children,
@@ -12,7 +19,7 @@ export default function RootLayout({
 
   return (
     <ServerThemeProvider attribute="class">
-      <html lang="en">
+      <html lang="en" className={roboto.className}>
         <head />
         <body>
           <Providers>

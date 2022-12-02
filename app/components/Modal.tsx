@@ -1,12 +1,12 @@
 
-
+'use client'
 
 
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, ReactNode, useState } from 'react'
 
-export default function Modal() {
-  let [isOpen, setIsOpen] = useState(true)
+export default function Modal({ children }: { children: ReactNode }) {
+  let [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
     setIsOpen(false)
@@ -60,12 +60,13 @@ export default function Modal() {
                   >
                     Payment successful
                   </Dialog.Title>
-                  <div className="mt-2">
+                  {/* <div className="mt-2">
                     <p className="text-sm text-gray-500">
                       Your payment has been successfully submitted. We’ve sent
                       you an email with all of the details of your order.
                     </p>
-                  </div>
+                  </div> */}
+                  {children}
 
                   <div className="mt-4">
                     <button
@@ -83,5 +84,32 @@ export default function Modal() {
         </Dialog>
       </Transition>
     </>
+  )
+}
+
+
+
+
+
+export function MyDialog() {
+  let [isOpen, setIsOpen] = useState(true)
+
+  return (
+    <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+      <Dialog.Panel>
+        <Dialog.Title>Deactivate account</Dialog.Title>
+        <Dialog.Description>
+          This will permanently deactivate your account
+        </Dialog.Description>
+
+        <p>
+          Are you sure you want to deactivate your account? All of your data
+          will be permanently removed. This action cannot be undone.
+        </p>
+
+        <button onClick={() => setIsOpen(false)}>Deactivate</button>
+        <button onClick={() => setIsOpen(false)}>Cancel</button>
+      </Dialog.Panel>
+    </Dialog>
   )
 }
