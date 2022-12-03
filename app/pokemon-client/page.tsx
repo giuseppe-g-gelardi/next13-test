@@ -18,6 +18,7 @@ export default function PokemonClientPage() {
               HERE
             </Link>
           </p>
+          <p className="mt-4 text-cyan-500 dark:text-rose-400">Click on a pokemon for more details!</p>
         </div>
       </div>
       <div className="flex flex-wrap mx-40 mt-10 z-0 items-center justify-center">
