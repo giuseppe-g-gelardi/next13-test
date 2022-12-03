@@ -1,10 +1,13 @@
 'use client'
 
-import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
 import ThemeSwitch from './ThemeSwitch'
 
+// * The SettingsMenu component is used to display the settings menu in the header component
+// * and to provide the theme switcher functionality.
 export default function SettingsMenu() {
 
   return (

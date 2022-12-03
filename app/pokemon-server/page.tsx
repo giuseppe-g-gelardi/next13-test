@@ -1,17 +1,21 @@
 import Link from "next/link";
 import PokeCard from "../components/PokeCard";
+import { PokemonDetailResponse } from "../types/Pokemon";
 
 type Pokemon = {
   name: string;
   url: string;
 }
 
+// * The fetchKantoPokemon function is used to fetch the first 9 pokemon from the
+// * Kanto region.
 async function fetchKantoPokemon(): Promise<Array<Pokemon>> {
   return await fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
     .then(response => response.json()).then(a => a.results)
 }
 
-async function fetchPokeDetails() {
+// * The fetchPokeDetails function is used to fetch the details for each pokemon.
+async function fetchPokeDetails(): Promise<Array<PokemonDetailResponse>> {
   const kantoPokemon = await fetchKantoPokemon()
   const pokemonDetails = await Promise.all(kantoPokemon.map(async (pokemon: Pokemon) => {
     return await fetch(pokemon.url).then(response => response.json())

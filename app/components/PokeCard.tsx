@@ -1,10 +1,13 @@
 'use client'
 
-import Image from "next/image";
 import { useState } from "react";
-import { PokemonDetailResponse } from "../types/Pokemon";
+import Image from "next/image";
 import Modal from "./Modal";
 
+import { PokemonDetailResponse } from "../types/Pokemon";
+
+// * The PokeCard component is used to render the pokemon image and
+// * the pokemon details modal.
 export default function PokeCard({ pokemon }: { pokemon: PokemonDetailResponse }) {
   const [showDetails, setShowDetails] = useState<boolean>(false);
   let [isOpen, setIsOpen] = useState(false)

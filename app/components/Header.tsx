@@ -30,7 +30,6 @@ export default function Header() {
         </Link>
 
       </span>
-
       <div><SettingsMenu /></div>
     </header >
   )

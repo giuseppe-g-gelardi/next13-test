@@ -1,3 +1,4 @@
+// * This file contains all the types for the Pokemon API
 
 export type PokemonDetailResponse = {
   abilities: Abilities;
