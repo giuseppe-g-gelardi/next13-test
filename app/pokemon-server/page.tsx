@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PokeCard from "../components/PokeCard";
-import PokemonCard from "../components/PokemonCard";
 
 type Pokemon = {
   name: string;

@@ -1,5 +1,23 @@
 
-
+export type PokemonDetailResponse = {
+  abilities: Abilities;
+  base_experience: number;
+  forms: Array<Forms>;
+  game_indices: Array<GameIndices>;
+  height: number;
+  id: number;
+  is_default: boolean;
+  location_area_encounters: string;
+  moves: Array<Moves>;
+  name: string;
+  order: number;
+  past_types: Array<any>;
+  species: Species;
+  sprites: Sprites;
+  stats: Array<Stats>;
+  types: Array<Types>;
+  weight: number;
+}
 
 
 type Abilities = {
@@ -73,22 +91,4 @@ type Types = {
 
 
 
-export type PokemonDetailResponse = {
-  abilities: Abilities;
-  base_experience: number;
-  forms: Array<Forms>;
-  game_indices: Array<GameIndices>;
-  height: number;
-  id: number;
-  is_default: boolean;
-  location_area_encounters: string;
-  moves: Array<Moves>;
-  name: string;
-  order: number;
-  past_types: Array<any>;
-  species: Species;
-  sprites: Sprites;
-  stats: Array<Stats>;
-  types: Array<Types>;
-  weight: number;
-}
+

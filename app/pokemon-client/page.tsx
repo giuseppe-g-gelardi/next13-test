@@ -2,7 +2,6 @@
 
 import { usePokemon } from "../context/PokemonContext"
 import Link from "next/link"
-import PokemonCard from "../components/PokemonCard"
 import PokeCard from "../components/PokeCard"
 
 export default function PokemonClientPage() {

@@ -35,22 +35,3 @@ export default function Header() {
     </header >
   )
 }
-
-
-// hover:bg-purple-800 dark:hover:bg-purple-200
-
-
-
-{/* <Link
-href='/'
-className="text-xl text-white dark:text-black hover:bg-purple-800 dark:hover:bg-purple-200 rounded-md">
-Tailwind
-<span className="text-cyan-500 dark:text-cyan-200">
-  CSS{" "}
-</span>
-/ Headless
-<span className="text-cyan-500 dark:text-cyan-200">
-  UI{" "}
-</span>
-&& Next13!
-</Link> */}
