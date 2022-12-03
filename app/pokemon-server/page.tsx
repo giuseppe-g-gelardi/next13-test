@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PokeCard from "../components/PokeCard";
 import PokemonCard from "../components/PokemonCard";
 
 type Pokemon = {
@@ -36,8 +37,8 @@ export default async function PokemonServerPage() {
         </div>
       </div>
       <div className="flex flex-wrap mx-40 mt-10 z-0 items-center justify-center">
-        {pokemonDetails.map(details =>
-          <PokemonCard key={details.id} name={details.name} image={details.sprites.front_default} />
+        {pokemonDetails.map(poke =>
+          <div key={poke.id}><PokeCard pokemon={poke} /></div>
         )}
       </div>
     </div>

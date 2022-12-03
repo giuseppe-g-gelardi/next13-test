@@ -3,6 +3,7 @@
 import { usePokemon } from "../context/PokemonContext"
 import Link from "next/link"
 import PokemonCard from "../components/PokemonCard"
+import PokeCard from "../components/PokeCard"
 
 export default function PokemonClientPage() {
   const { pokemon } = usePokemon()
@@ -22,7 +23,7 @@ export default function PokemonClientPage() {
       </div>
       <div className="flex flex-wrap mx-40 mt-10 z-0 items-center justify-center">
         {pokemon.map(poke =>
-          <PokemonCard key={poke.id} name={poke.name} image={poke.sprites.front_default!} />
+          <div key={poke.id}><PokeCard pokemon={poke} /></div>
         )}
       </div>
     </div>
